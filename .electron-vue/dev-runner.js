@@ -9,7 +9,7 @@ const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 
-const mainConfig = require('./webpack.main.config')
+// const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 
 let electronProcess = null
@@ -77,44 +77,44 @@ function startRenderer () {
   })
 }
 
-function startMain () {
-  return new Promise((resolve, reject) => {
-    mainConfig.entry.main = [path.join(__dirname, '../src/main/index.dev.js')].concat(mainConfig.entry.main)
+// function startMain () {
+//   return new Promise((resolve, reject) => {
+//     mainConfig.entry.main = [path.join(__dirname, '../src/main/index.dev.js')].concat(mainConfig.entry.main)
 
-    const compiler = webpack(mainConfig)
+//     const compiler = webpack(mainConfig)
 
-    compiler.plugin('watch-run', (compilation, done) => {
-      logStats('Main', chalk.white.bold('compiling...'))
-      hotMiddleware.publish({ action: 'compiling' })
-      done()
-    })
+//     compiler.plugin('watch-run', (compilation, done) => {
+//       logStats('Main', chalk.white.bold('compiling...'))
+//       hotMiddleware.publish({ action: 'compiling' })
+//       done()
+//     })
 
-    compiler.watch({}, (err, stats) => {
-      if (err) {
-        console.log(err)
-        return
-      }
+//     compiler.watch({}, (err, stats) => {
+//       if (err) {
+//         console.log(err)
+//         return
+//       }
 
-      logStats('Main', stats)
+//       logStats('Main', stats)
 
-      if (electronProcess && electronProcess.kill) {
-        manualRestart = true
-        process.kill(electronProcess.pid)
-        electronProcess = null
-        startElectron()
+//       if (electronProcess && electronProcess.kill) {
+//         manualRestart = true
+//         process.kill(electronProcess.pid)
+//         electronProcess = null
+//         startElectron()
 
-        setTimeout(() => {
-          manualRestart = false
-        }, 5000)
-      }
+//         setTimeout(() => {
+//           manualRestart = false
+//         }, 5000)
+//       }
 
-      resolve()
-    })
-  })
-}
+//       resolve()
+//     })
+//   })
+// }
 
 function startElectron () {
-  electronProcess = spawn(electron, ['--inspect=5858', path.join(__dirname, '../dist/electron/main.js')])
+  electronProcess = spawn(electron, ['--inspect=5858', path.join(__dirname, '../app/index.js')])
 
   electronProcess.stdout.on('data', data => {
     electronLog(data, 'blue')
@@ -166,9 +166,10 @@ function greeting () {
 function init () {
   greeting()
 
-  Promise.all([startRenderer(), startMain()])
+  // Promise.all([startRenderer(), startMain()])
+  Promise.all([startRenderer()])
     .then(() => {
-      startElectron()
+      process.argv.includes('--render') ? '' : startElectron()
     })
     .catch(err => {
       console.error(err)

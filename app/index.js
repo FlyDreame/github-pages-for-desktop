@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+const { app, BrowserWindow } = require('electron')
 
 /**
  * Set `__static` path to static files in production

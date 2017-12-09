@@ -10,7 +10,7 @@ const webpack = require('webpack')
 const Multispinner = require('multispinner')
 
 
-const mainConfig = require('./webpack.main.config')
+// const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 const webConfig = require('./webpack.web.config')
 
@@ -32,9 +32,10 @@ function clean () {
 function build () {
   greeting()
 
-  del.sync(['dist/electron/*', '!.gitkeep'])
+  // del.sync(['dist/electron/*', '!.gitkeep'])
 
-  const tasks = ['main', 'renderer']
+  // const tasks = ['main', 'renderer']
+  const tasks = ['renderer']
   const m = new Multispinner(tasks, {
     preText: 'building',
     postText: 'process'
@@ -49,15 +50,15 @@ function build () {
     process.exit()
   })
 
-  pack(mainConfig).then(result => {
-    results += result + '\n\n'
-    m.success('main')
-  }).catch(err => {
-    m.error('main')
-    console.log(`\n  ${errorLog}failed to build main process`)
-    console.error(`\n${err}\n`)
-    process.exit(1)
-  })
+  // pack(mainConfig).then(result => {
+  //   results += result + '\n\n'
+  //   m.success('main')
+  // }).catch(err => {
+  //   m.error('main')
+  //   console.log(`\n  ${errorLog}failed to build main process`)
+  //   console.error(`\n${err}\n`)
+  //   process.exit(1)
+  // })
 
   pack(rendererConfig).then(result => {
     results += result + '\n\n'
