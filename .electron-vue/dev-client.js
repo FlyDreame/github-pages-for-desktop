@@ -37,4 +37,8 @@ hotClient.subscribe(event => {
       </div>
     `
   }
+
+  if (event.action === 'reload') {
+    window.location.reload()
+  }
 })

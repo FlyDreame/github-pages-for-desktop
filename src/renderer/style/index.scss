@@ -1,0 +1,8 @@
+// 重置样式
+@import './reset.scss';
+
+// scss变量以及覆盖element的scss变量
+@import './var.scss';
+
+// 页面样式
+@import './pages/index.scss';
