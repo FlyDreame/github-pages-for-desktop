@@ -1,7 +1,12 @@
 <template>
   <div class="gpage-index">
     <header class="gpage-index__header">
-      GPage
+      <div class="page-index-logo"></div>
+      <div class="page-index-btn-group">
+        <el-button>缩小</el-button>
+        <el-button>方法</el-button>
+        <el-button>关闭</el-button>
+      </div>
     </header>
     <router-view></router-view>
   </div>

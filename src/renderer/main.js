@@ -6,6 +6,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import './icon/iconfont.css'
 import './style/element-variables.scss'
 import './style/index.scss'
 

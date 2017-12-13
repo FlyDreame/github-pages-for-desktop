@@ -4,6 +4,12 @@
  * @Desc: 自定义变量
  * @Params:  
  */
- 
+
 /* 改变主题色变量 */
 $--color-primary: #5bc0be;
+
+/* 改变按钮变量 */
+$--border-radius-base: 2px !default;
+$--border-radius-small: 2px !default;
+$--button-padding-vertical: 8px !default;
+$--button-padding-horizontal: 15px !default;

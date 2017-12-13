@@ -4,10 +4,12 @@
   position: fixed;
   top: 0;
   background-color: $--color-primary;
-  color: #fff
+  color: #fff;
+  -webkit-app-region: drag
 }
 
-.sss {
-  float: left;
-  height: 33px;
+.page-index-btn-group {
+  .el-button {
+    -webkit-app-region: no-drag
+  }
 }
