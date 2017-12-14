@@ -7,7 +7,7 @@ import router from './router'
 import store from './store'
 
 import './icon/iconfont.css'
-import './style/element-variables.scss'
+import './style/theme.scss'
 import './style/index.scss'
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))

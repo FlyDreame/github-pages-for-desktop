@@ -6,10 +6,13 @@
  */
 
 /* 改变主题色变量 */
-$--color-primary: #5bc0be;
+$--color-primary: #c72e30;
 
 /* 改变按钮变量 */
 $--border-radius-base: 2px !default;
 $--border-radius-small: 2px !default;
 $--button-padding-vertical: 8px !default;
 $--button-padding-horizontal: 15px !default;
+
+/* 头高 */
+$--gpage-header-height: 60px;

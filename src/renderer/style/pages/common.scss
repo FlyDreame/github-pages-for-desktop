@@ -1,15 +1,26 @@
 .gpage-index__header {
-  height: 60px;
+  height: $--gpage-header-height;
   width: 100%;
   position: fixed;
   top: 0;
   background-color: $--color-primary;
   color: #fff;
-  -webkit-app-region: drag
+  -webkit-app-region: drag;
+  line-height: $--gpage-header-height;
+  padding: 0 10px;
+  font-size: 16px;
 }
 
 .page-index-btn-group {
+  float: right;
   .el-button {
-    -webkit-app-region: no-drag
+    -webkit-app-region: no-drag;
+    margin-left: 0;
+    padding: 8px;
   }
+}
+
+.page-index-logo {
+  display: inline-block;
+  font-size: 18px;
 }
