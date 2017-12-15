@@ -1,6 +1,6 @@
 # gpage
 
-> An electron-vue project
+> 基于electron-vue开发的github page博客管理工具
 
 #### Build Setup
 
@@ -24,5 +24,3 @@ npm run lint
 ```
 
 ---
-
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
