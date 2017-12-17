@@ -1,3 +1,8 @@
+
+.gpage-index {
+  height: 100%;
+}
+
 .gpage-index__header {
   height: $--gpage-header-height;
   width: 100%;
@@ -16,11 +21,27 @@
   .el-button {
     -webkit-app-region: no-drag;
     margin-left: 0;
-    padding: 8px;
+    padding: 4px;
+    color: #E29595;
+
+    &:hover {
+      color: #fff
+    }
   }
 }
 
 .page-index-logo {
   display: inline-block;
   font-size: 18px;
+}
+
+.gpage-index__main {
+  padding-top: 50px;
+  height: 100%;
+
+  .el-container {
+    height: 100%;
+  }
+
+  
 }
