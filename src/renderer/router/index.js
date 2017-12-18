@@ -5,6 +5,9 @@ import Index from '@/pages/Index'
 import Init from '@/pages/init/Init'
 import Home from '@/pages/home/Home'
 
+import Article from '@/pages/home/article/Article.vue'
+import Setting from '@/pages/home/setting/Setting.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -23,7 +26,19 @@ export default new Router({
         {
           path: 'home',
           name: 'home',
-          component: Home
+          component: Home,
+          children: [
+            {
+              path: '',
+              name: 'Article',
+              component: Article
+            },
+            {
+              path: '',
+              name: 'Setting',
+              component: Setting
+            }
+          ]
         }
       ]
     }
