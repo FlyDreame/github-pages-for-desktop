@@ -2,7 +2,7 @@
   <div class="gpage-index">
     <header class="gpage-index__header">
       <div class="page-index-logo">
-        <img src=""></img>
+        <img src="">
         <span>GPage</span>
       </div>
       <div class="page-index-btn-group">
