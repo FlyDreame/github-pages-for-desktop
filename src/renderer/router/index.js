@@ -7,6 +7,8 @@ import Home from '@/pages/home/Home'
 
 import Article from '@/pages/home/article/Article.vue'
 import Setting from '@/pages/home/setting/Setting.vue'
+import Main from '@/pages/home/main/Main.vue'
+import Plugin from '@/pages/home/plugin/Plugin.vue'
 
 Vue.use(Router)
 
@@ -30,13 +32,23 @@ export default new Router({
           children: [
             {
               path: '',
+              name: 'Main',
+              component: Main
+            },
+            {
+              path: 'article',
               name: 'Article',
               component: Article
             },
             {
-              path: '',
+              path: 'setting',
               name: 'Setting',
               component: Setting
+            },
+            {
+              path: 'plugin',
+              name: 'Plugin',
+              component: Plugin
             }
           ]
         }
