@@ -1,26 +1,12 @@
 # gpage
 
-> 基于electron-vue开发的github page博客管理工具
+基于electron-vue，hexo开发的博客管理工具, 支持一键部署到github page，文件备份。
 
-#### Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:9080
-npm run dev
-
-# build electron application for production
-npm run build
-
-# run unit & end-to-end tests
-npm test
-
-
-# lint all JS/Vue component files in `src/`
-npm run lint
-
-```
-
----
+### 待实现功能：
+[] 主页
+[] 文章增删改查
+[] hexo整体设置
+[] hexo插件可视化
+[] hexo主题可选择、配置
+[] 一键部署github page
+[] 文件备份
