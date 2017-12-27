@@ -47,10 +47,10 @@
       ]
     },
     "mac": {
-      "icon": "build/icons/icon.icns"
+      "icon": "build/icons/gpage.icns"
     },
     "win": {
-      "icon": "build/icons/icon.ico"
+      "icon": "build/icons/gpage.ico"
     },
     "linux": {
       "icon": "build/icons"
