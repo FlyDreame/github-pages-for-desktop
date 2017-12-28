@@ -1,6 +1,7 @@
 'use strict'
 
 const { app, BrowserWindow } = require('electron')
+const ipcMain = require('./ipcMain/ipcMain')
 
 /**
  * Set `__static` path to static files in production
@@ -46,6 +47,8 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+ipcMain()
 
 /**
  * Auto Updater
